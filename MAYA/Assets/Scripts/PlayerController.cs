@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour {
         energy = (energy < 0.1) ? 0 : energy;
 
         //Decides if input is enabled or not
-        _enableInput = (energy == 0f) ? false : true; //perhaps avoid setting floats to 0, ask teachers about that
+        _enableInput = (energy == 0f) ? false : true; 
         if (_enableInput == false)
         {
             _rigidBody.constraints = RigidbodyConstraints2D.None;
@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
+    //Maps buttons to certain integers to make checking for buttons faster
     private void MapInputToInteger()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -168,6 +169,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
+    //Manages actions for Input
     private void ManageInput ()
     {
         if (_buttonPressed == 1)

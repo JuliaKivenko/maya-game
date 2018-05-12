@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Tutorial : MonoBehaviour {
 
     public GameObject tutorial1;
@@ -9,18 +10,28 @@ public class Tutorial : MonoBehaviour {
     private PlayerController _player;
     private bool _displayDashTutorial = true;
     private bool _displayFlyTutorial = true;
-    // Use this for initialization
 
-    //Player preferences to save the value to show tutorial only once and never again
+    
 
     void Start()
     {
         _player = FindObjectOfType<PlayerController>();
     }
 
-    // Update is called once per frame
+    
+    
     void Update()
     {
+        //Check if player has already seen tutorial
+        int tutorialSeen = PlayerPrefs.GetInt("tutorialSeen");
+        if (tutorialSeen == 1)
+        {
+            tutorial1.SetActive(false);
+            return;
+        }
+
+
+        //Display first part of tutorial
         if (_displayFlyTutorial)
         {
             Time.timeScale = 0;
@@ -39,6 +50,8 @@ public class Tutorial : MonoBehaviour {
             Time.timeScale = (_displayFlyTutorial) ? 0 : 1;
         }
 
+
+        //Display Dash tutorial
         if (_player.energy <= 5 && _displayDashTutorial == true)
         {
             Time.timeScale = 0;
@@ -47,8 +60,10 @@ public class Tutorial : MonoBehaviour {
             {
 
                 Time.timeScale = 1;
+
                 tutorial2.SetActive(false);
                 _displayDashTutorial = false;
+                PlayerPrefs.SetInt("tutorialSeen", 1);
             }
         }
     }

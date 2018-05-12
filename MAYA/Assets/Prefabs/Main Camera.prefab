@@ -138,6 +138,7 @@ MonoBehaviour:
   normalScrollSpeed: -10
   deceleration: 1
   scoreText: {fileID: 0}
+  winScore: {fileID: 0}
   scrollSpeed: -10
 --- !u!124 &124823052751061906
 Behaviour:

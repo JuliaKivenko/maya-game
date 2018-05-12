@@ -382,15 +382,10 @@ Prefab:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1586989016}
-    - target: {fileID: 198971311008052824, guid: 23baa0d07dd467948874c3e074b78fc6,
+    - target: {fileID: 114859170102665966, guid: 23baa0d07dd467948874c3e074b78fc6,
         type: 2}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198971311008052824, guid: 23baa0d07dd467948874c3e074b78fc6,
-        type: 2}
-      propertyPath: randomSeed
-      value: -207619445
+      propertyPath: energyLossMultiplier
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23baa0d07dd467948874c3e074b78fc6, type: 2}
@@ -1103,6 +1098,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114111217133174642, guid: e1cd24b6da121da4a8d0703e18290e9a,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 504472078}
+    - target: {fileID: 114067301264452296, guid: e1cd24b6da121da4a8d0703e18290e9a,
+        type: 2}
+      propertyPath: tutorial1
+      value: 
+      objectReference: {fileID: 1719217986}
+    - target: {fileID: 114067301264452296, guid: e1cd24b6da121da4a8d0703e18290e9a,
+        type: 2}
+      propertyPath: tutorial2
+      value: 
+      objectReference: {fileID: 1893015735}
     - target: {fileID: 114576982733829074, guid: e1cd24b6da121da4a8d0703e18290e9a,
         type: 2}
       propertyPath: canvas
@@ -1138,21 +1148,6 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1390542644}
-    - target: {fileID: 114111217133174642, guid: e1cd24b6da121da4a8d0703e18290e9a,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 504472078}
-    - target: {fileID: 114067301264452296, guid: e1cd24b6da121da4a8d0703e18290e9a,
-        type: 2}
-      propertyPath: tutorial1
-      value: 
-      objectReference: {fileID: 1719217986}
-    - target: {fileID: 114067301264452296, guid: e1cd24b6da121da4a8d0703e18290e9a,
-        type: 2}
-      propertyPath: tutorial2
-      value: 
-      objectReference: {fileID: 1893015735}
     - target: {fileID: 114576982733829074, guid: e1cd24b6da121da4a8d0703e18290e9a,
         type: 2}
       propertyPath: winScore
@@ -1276,12 +1271,12 @@ Prefab:
     - target: {fileID: 224509649983333520, guid: a8617b981d4545248be8f7f1d9d70d1b,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224509649983333520, guid: a8617b981d4545248be8f7f1d9d70d1b,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1409782721003594, guid: a8617b981d4545248be8f7f1d9d70d1b, type: 2}
       propertyPath: m_IsActive

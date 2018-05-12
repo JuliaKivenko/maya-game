@@ -12,7 +12,7 @@ public class MissChecker : MonoBehaviour {
     public ParticleSystem missBurst;
 
 	
-	void FixedUpdate () {
+	void Update () {
 
         _hit = Physics2D.Linecast(transform.position, Vector2.up * -100, defLayerMask);
         Debug.DrawRay(transform.position, Vector2.up * -100, Color.yellow);
@@ -24,7 +24,6 @@ public class MissChecker : MonoBehaviour {
 
         if (_hit.transform.GetComponent<PlayerController>() &&  player.ringPassed == false && _playOnce == true)
         {
-            Debug.Log("hit");
             Instantiate(missBurst, player.transform.position, Quaternion.identity);
             missBurst.Play();
             StartCoroutine(player.SmoothEnergyChange(player.energy - player.obstacleEnergyLoss));
